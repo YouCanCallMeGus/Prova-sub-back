@@ -19,7 +19,7 @@ class FilmeServiceTest {
     @BeforeEach
     void setUp() {
         filmeRepository = Mockito.mock(FilmeRepository.class);
-        filmeService = new FilmeService(filmeRepository); // ✔ injeção via construtor
+        filmeService = new FilmeService(filmeRepository);
     }
 
     @Test

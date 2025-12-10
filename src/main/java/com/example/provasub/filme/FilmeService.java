@@ -7,8 +7,12 @@ import java.util.List;
 
 @Service
 public class FilmeService {
+    private final FilmeRepository filmeRepository;
+
     @Autowired
-    private FilmeRepository filmeRepository;
+    public FilmeService(FilmeRepository filmeRepository) {
+        this.filmeRepository = filmeRepository;
+    }
 
     public List<Filme> getFilmes() {
         return filmeRepository.findAll();
